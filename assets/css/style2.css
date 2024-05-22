@@ -1,0 +1,396 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(255, 255, 255);
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    background-color: #085788;
+    background-size:contain;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 2rem;
+    margin: 0px;
+}
+
+.nav-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-logo i, .nav-logo h1 {
+    transform: translate(30px, 0);
+}
+
+.nav-logo h1 {
+    font-size: 100%;
+    transform: translate(2rem, 0.3rem);
+}
+
+
+.nav-text {
+    display: none;
+    gap: 0.6rem;
+    cursor: pointer;
+}
+
+.nav-text a {
+    text-decoration: none;
+    margin-top: 1rem;
+    color: white;
+    font-weight: 600;
+}
+
+
+
+
+/* MAIN */
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: rgb(162, 158, 161);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    gap: 2rem;
+}
+.filtro{
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+   padding: 20px;
+   background-color: lightgray;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 1px solid rgb(214, 214, 214);
+    justify-content: center;
+    align-items: center;
+    /* padding: 1rem; */
+    margin: 0rem 0rem;
+    box-shadow: 2px 2px 10px rgba(101, 101, 101, 0.5);
+    
+}
+
+.imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card img {
+    width: 90%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+button{
+    width: 100px;
+    background-color: #1329e8;
+    color: white;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+
+
+
+  
+/* SECTION: PÁGINAS */
+.numeros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 ;
+    padding: 1.5rem 0;
+    position:fixed;
+    bottom: 80px;
+    z-index: 1;
+    gap: 0.5rem;
+    background-size: contain;
+    background-repeat: none;
+    width: 100%;
+}
+
+.numeros button {
+    background-color:rgb(208, 222, 80);
+    border: none;
+    position: relative;
+    color: #000000;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+footer {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color:#050e5d;
+    align-content: center;
+    text-align: center;
+    margin: 0;
+    padding: 1rem 0 1rem 0;
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
+}
+
+footer p, footer i {
+    margin: 0.2rem;
+    padding: 0;
+}
+
+.rrss {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 150%;
+}
+
+.rrss i {
+    cursor: pointer;
+    color: white;
+}
+
+.fa-facebook {
+    font-size: 92%
+}
+
+
+/* GRID AREAS */
+nav{
+    grid-area: nav;
+}
+
+main{
+    grid-area: main;
+}
+
+.numeros{
+    grid-area: numeros;
+}
+
+footer{
+    grid-area: footer;
+}
+.filtro{
+    grid-area: filtro;
+}
+
+
+/* MEDIA QUERYS */
+
+/* [576px, ...[ */
+@media (min-width:576px){
+    .contenedor{
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-areas:
+            "nav nav"
+            "filtro main"
+            "numeros numeros"
+            "footer footer";
+    }
+   
+    /* NAVBAR */
+    .barritas{
+        display: none;
+    }
+
+    .navbar {
+        background-color: #1329e8;
+        
+    }
+
+    .nav-text{
+        display: flex;
+        padding-top: 1rem;
+    }
+    
+    .nav-logo h1 {
+        transform: translate(2rem, 0.3rem); 
+    }
+
+    
+
+    /* MAIN */
+
+    main{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 8rem;
+    }
+    
+    .card {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid rgb(214, 214, 214);
+        justify-content: center;
+        align-items: center;
+        margin: 0rem 0rem;
+    }
+
+    /* .card:hover p {
+        padding: 2%;
+    } */
+
+    /* SECCIÓN: PÁGINAS */
+    .numeros {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 ;
+        padding: 1.5rem 0;
+        position:fixed;
+        bottom: 80px;
+        z-index: 1;
+        gap: 0.5rem;
+        background-size: cover;
+        background-repeat: none;
+        width: 100%;
+    }
+
+  }
+
+@media (min-width:1150px) { 
+
+    .contenedorCard{
+        display: grid;
+        height: 100vh;
+        max-height: max-content;
+        grid-template-columns: 15% 85%;
+        grid-template-rows: auto; 
+        grid-template-areas:
+        "nav filtro"
+        "nav main"
+        "nav main"
+        "nav main"
+        "footer numeros";
+    }
+    
+    .navbar{
+        padding-right: 0;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+        background-color: #1329e8;
+        position: sticky;
+        z-index: 999;
+    }
+
+    .nav-logo i, .nav-logo h1 {
+        transform: none;
+        transform: translate(0, 2rem);
+    }
+
+    .nav-logo {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .nav-logo h1 {
+        transform: translate(0, 2.2rem); 
+    }
+
+    .nav-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        transform: translate(0, 4rem);
+    }
+
+    /* MAIN */
+    main{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        overflow-y: scroll;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+
+    /* .card:hover p {
+        padding: 2%;
+    } */
+
+    img{
+        height: 80%;
+        width: 90%;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .card {
+        display: flex;
+        border: 1px solid rgb(214, 214, 214);
+        justify-content: center;
+        align-items: center;
+        margin: 0 0 0 00px;
+        padding-bottom: 2rem;
+    }
+
+    .card img {
+        width: 90%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* SECCIÓN: PÁGINAS */
+
+    .numeros{
+        bottom: 0px;
+        position: sticky;
+    }
+
+    /* FOOTER */
+    footer {
+        display: flex;
+        height: 100hv;
+        flex-direction: column;
+        color: white;
+        justify-content: center;
+        padding: 0;
+    }
+
+    footer i {
+        margin-bottom: 1rem;
+    }
+}
